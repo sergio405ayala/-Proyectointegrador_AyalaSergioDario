@@ -5,12 +5,6 @@ div{
     background-color: #1ab5cb;
     text-align: center;
 }
-/*etiqueta nombre*/
-#nombre{
-    font-weight: bold;
-    margin-top: 30%;
-     
-}
 /*estilo de la foto de perfil*/
  @media (win-width: 576px){
     #fotodeperfil{
@@ -18,7 +12,12 @@ div{
     width: 15%;
     border-radius: 100%;
     box-shadow: 3px 3px 3px grey;
-    left: 5%;
-
-    }
+    left: 3%;
+    top: 600px
+   }
+}
+/*etiqueta nombre*/
+#nombre{
+    font-weight: bold;
+    margin-top: 30%;
 }
