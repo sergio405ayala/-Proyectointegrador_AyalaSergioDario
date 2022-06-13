@@ -1,0 +1,9 @@
+.row{
+    padding: 20px;
+}
+div{
+    background: #1ab5cb;
+}
+h1, h3{
+    display: inline;
+}
