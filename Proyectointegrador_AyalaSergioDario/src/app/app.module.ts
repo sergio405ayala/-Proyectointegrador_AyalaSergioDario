@@ -27,8 +27,8 @@ import { HysComponent } from './components/hys/hys.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     NgCircleProgressModule.forRoot({})
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
