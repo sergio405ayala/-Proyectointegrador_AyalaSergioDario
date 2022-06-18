@@ -20,15 +20,15 @@ public class Persona {
     
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-   private string nombre;
+   private String nombre;
     
      @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-   private string apellido;
+   private String apellido;
      
       
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-   private string img;
+   private String img;
 
     public long getId() {
         return id;
@@ -38,27 +38,27 @@ public class Persona {
         this.id = id;
     }
 
-    public string getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(string nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public string getApellido() {
+    public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(string apellido) {
+    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public string getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(string img) {
+    public void setImg(String img) {
         this.img = img;
     }
 
