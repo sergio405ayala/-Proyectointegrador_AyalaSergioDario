@@ -1,4 +1,3 @@
-
 package com.porfilio.sda.Entity;
 
 import javax.persistence.Entity;
@@ -10,25 +9,25 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
-
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class Persona {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private long id;
-    
+    private long id;
+
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-   private String nombre;
-    
-     @NotNull
+    private String nombre;
+
+    @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-   private String apellido;
-     
-      
+    private String apellido;
+
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-   private String img;
+    private String img;
 
     public long getId() {
         return id;
@@ -62,8 +61,4 @@ public class Persona {
         this.img = img;
     }
 
-   
-    
-    
-   
 }
