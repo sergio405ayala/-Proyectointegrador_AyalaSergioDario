@@ -4,7 +4,7 @@
  */
 package com.porfilio.sda.Security;
 
-import com.porfilio.sda.Security.Repository.UserDetailsImpl;
+import com.porfilio.sda.Security.Service.UserDetailsImpl;
 import com.porfilio.sda.Security.jwt.JwtEntryPoint;
 import com.porfilio.sda.Security.jwt.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;

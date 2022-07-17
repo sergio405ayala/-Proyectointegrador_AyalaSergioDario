@@ -4,7 +4,7 @@
  */
 package com.porfilio.sda.Security.jwt;
 
-import com.porfilio.sda.Security.Repository.UserDetailsImpl;
+import com.porfilio.sda.Security.Service.UserDetailsImpl;
 import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -38,16 +38,16 @@ public class JwtTokenFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(auth);
             }
         } catch (Exception e) {
-            logger.error("falli el metodo doFilterInternal");
+            logger.error("falla el metodo doFilterInternal");
         }
         filterChain.doFilter(request, response);
     }
 
     private String getToken(HttpServletRequest request) {
         String header = request.getHeader("Authorization");
-        if (header != null && header.startsWith("Bearer")) {
+        if (header != null && header.startsWith("Bearer")) 
             return header.replace("Bearer", "");
-        }
+       
         return null;
     }
 }
