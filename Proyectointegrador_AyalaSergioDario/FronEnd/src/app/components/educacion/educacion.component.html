@@ -1,92 +1,31 @@
 <div class="row">
-    <h1> Educacion</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-    <ul>
-        <li>
-            <h1>E.E.T.N.1</h1> - <h3>1983 - 1989</h3>
-        </li>
-        <h6> Tecnico Electronico
-            MATRICULA 2637
-            
-            C.O.P.I.T.E.C. consejo profecional de ingenieria de telecomunicaciones, electronica y computacion.</h6>
-    </ul>
-    <ul>
-        <li>
-            <h1>U.T.N.</h1> - <h3>1990 - 1994</h3>
-        </li>
-        <h6>Ingenieria Electronica
-            Ing.Electronica 4 años cursados carrera pendiente</h6>
-    </ul>
-    <ul>
-        <li>
-            <h1>Certificacion varias</h1> - <h3>2018 - 2022</h3>
-        </li>
-        <h6>-Instructor IPC 610 Acptabilidad Ensambles electronico</h6>
-        <h6>-Instructor IPC 7711/21 Reproceso ,Reparacion Y Modificacion de Ensambles Electronios</h6> 
-        <h6>-Microsoft Office 2016 - Word Básico</h6> 
-        <h6>-Microsoft Office 2016 - Word Avanzado</h6> 
-        <h6>-Microsoft Office 2016 - PPT Básico</h6> 
-        <h6>-Microsoft Office 2016 - PPT Avanzado</h6> 
-        <h6>-Microsoft Office 2016 - Excel Básico</h6> 
-        <h6>-Microsoft Office 2016 - Excel Avanzado</h6> 
-        <h6>-Administración efectiva del tiempo</h6> 
-        <h6>-Atención al cliente -Ciberseguridad</h6> 
-        <h6>-Comercialización -Comunicación eficaz</h6> 
-        <h6>-Proceso de venta -Liderazgo</h6> 
-        <h6>-Marketing directo -Negociación</h6> 
-        <h6>-Planificación estratégica del negocio</h6> 
-        <h6>-Redacción corporativa -Seguridad en oficinas</h6> 
-        <h6>-Trabajo en equipo -Inteligencia Emocional</h6> 
-        <h6>-Sistema de Gestión Integrado -Soldadura de Brazing</h6> 
-        <h6>-Machine Learning</h6> 
-        <h6>-Lean Manufacturing</h6> 
-        <h6>-Scrum - Básico</h6>
-        <h6>-Manejo de instrumentos de medición</h6> 
-        <h6>-Uso de Materias Primas</h6> 
-        <h6>-Dobladoras Conceptos básicos</h6>
-        <h6>-Lean Manufacturing:5S y SMED</h6> 
-        <h6>-Diseño y Desarrollo Web Básico</h6> 
-        <h6>-Kaizen: Mejora continua</h6> 
-        <h6>-Agilidad Organizacional</h6> 
-        <h6>-Cripto Economía</h6> 
-        <h6>-PNL: Lenguaje Corporal</h6> 
-        <h6>-Comunicación en un Equipo de Trabajo</h6> 
-        <h6>-Big Data & Business Intelligence</h6> 
-        <h6>-Inteligencia Emocional</h6> 
-        <h6>-Neurociencia-Concepto</h6> 
-        <h6>-Calidad en el Servicio al Cliente</h6> 
-        <h6>-Claridad en el Mensaje</h6> 
-        <h6>-Factor Humano en los Equipos de Trabajo</h6> 
-        <h6>-Herramientas para Gestionar un Proyecto</h6> 
-        <h6>-Innovación para poder crecer</h6> 
-        <h6>-Propuesta Comercial Vendedora</h6> 
-        <h6>-Manejando las Prioridades</h6> 
-        <h6>-Redacción y Uso de Emails y Documentos</h6> 
-        <h6>-Power BI Intermedio</h6>
-        <h6>-C# Módulo 1 </h6>
-        <h6>-C# Módulo 2</h6> 
-        <h6>-C# Módulo 3</h6>
-        <h6>-Diseño y Desarrollo Web</h6> 
-        <h6>-Intermedio -Visual Basic .NET Módulo 1</h6>
-        <h6>-SQL Módulo 1</h6> 
-        <h6>-SQL Módulo 2</h6> 
-        <h6>-Python para Principiantes Modulo 1</h6> 
-        <h6>-Python - Módulo 2</h6> 
-        <h6>-Empoderamiento y Liderazgo Femenino</h6> 
-        <h6>-Equipo de trabajo más productivo</h6> 
-        <h6>-Estrés laboral</h6> 
-        <h6>-Gestión de recursos humanos en ámbitos divers</h6> 
-        <h6>-Digitaliza paso a paso tu negocio con Google My Business y YouTube</h6> 
-        <h6>-Fundamentos de Marketing Digital</h6> 
-        <h6>-Competencias digitales para profesionales</h6> 
-        <h6>-Familiarízate con los básicos principios de la programación</h6> 
-        <h6>-Curso de Desarrollo de Apps Móviles</h6> 
-        <h6>-Curso de Introducción al Desarrollo Web: HTML y CSS (1/2)</h6> 
-        <h6>-Curso de Introducción al Desarrollo Web: HTML y CSS (2/2)</h6> 
-        <h6>-Cloud Computing </h6>
-        <h6>-certificación argentina programa 1 (se programar)</h6>
-             
-    </ul>
+    <h1>Educacion</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaeducacion" *ngIf="isLogged">
+            Nueva Educacion
+        </button>
     </div>
-    
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h2>{{Educacion.nombreE}}</h2>
+                    </td>
+                    <td>{{Educacion.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editeducacion/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
